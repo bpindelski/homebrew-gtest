@@ -3,7 +3,7 @@ require 'formula'
 class OmeGtest < Formula
   url 'http://googletest.googlecode.com/files/gtest-1.7.0.zip'
   homepage 'http://code.google.com/p/googletest/'
-  md5 '2d6ec8ccdf5c46b05ba54a9fd1d130d7'
+  sha1 'f85f6d2481e2c6c4a18539e391aa4ea8ab0394af'
 
   def options
     [
