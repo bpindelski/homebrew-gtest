@@ -5,6 +5,8 @@ class OmeGtest < Formula
   homepage 'http://code.google.com/p/googletest/'
   sha1 'f85f6d2481e2c6c4a18539e391aa4ea8ab0394af'
 
+  depends_on 'cmake' => :build
+
   def options
     [
       ["--universal", "Build for both 32 & 64 bit Intel."],
