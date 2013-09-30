@@ -7,19 +7,11 @@ class OmeGtest < Formula
 
   depends_on 'cmake' => :build
 
-  def options
-    [
-      ["--universal", "Build for both 32 & 64 bit Intel."],
-    ]
-  end
-
   def install
-    # ENV.universal_binary if ARGV.build_universal?
-
-    # system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking"
-    # # gtest-config tries to be clever in locating libraries, but Homebrew's
-    # # Cellar confuses it. This lets `gtest-config --libs` work correctly
-    # inreplace 'scripts/gtest-config', '`dirname $0`', '$bindir'
-    # system "make install"
+    lib.mkpath
+    cd(lib) do
+      system "cmake .."
+      system "make"
+    end
   end
 end
