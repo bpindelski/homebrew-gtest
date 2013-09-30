@@ -1,6 +1,6 @@
 require 'formula'
 
-class Ome_gtest < Formula
+class OmeGtest < Formula
   url 'http://googletest.googlecode.com/files/gtest-1.7.0.zip'
   homepage 'http://code.google.com/p/googletest/'
   md5 '2d6ec8ccdf5c46b05ba54a9fd1d130d7'
