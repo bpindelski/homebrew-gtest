@@ -8,10 +8,13 @@ class OmeGtest < Formula
   depends_on 'cmake' => :build
 
   def install
-    lib.mkpath
-    cd(lib) do
-      system "cmake .."
+    mkdir 'build' do
+      system "cmake", "..", *std_cmake_args
       system "make"
     end
+    target = prefix/'gtest'
+    target.install Dir['include']
+    target.install Dir['build/*.a']
+    lib.install target
   end
 end
